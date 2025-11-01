@@ -7,9 +7,11 @@ import PublicHome from './components/public/PublicHome'
 import Login from './components/public/Login'
 import Register from './components/public/Register'
 import CustomerLayout from './components/customer/CustomerLayout'
-import CustomerHome from './components/customer/CustomerHome'
-import CustomerTransfer from './components/customer/CustomerTransfer'
-import CustomerHistory from './components/customer/CustomerHistory'
+import AccountDetails from './components/customer/AccountDetails'
+import NewTransaction from './components/customer/NewTransaction'
+import TransactionHistory from './components/customer/TransactionHistory'
+import UpdatePassword from './components/customer/UpdatePassword'
+import DeleteAccount from './components/customer/DeleteAccount'
 import NotFound from './components/NotFound'
 
 function App() {
@@ -27,9 +29,11 @@ function App() {
             </Route>
 
             <Route path="customer" element={<CustomerLayout />}>
-              <Route index element={<CustomerHome />} />
-              <Route path="transfer" element={<CustomerTransfer />} />
-              <Route path="history" element={<CustomerHistory />} />
+              <Route index element={<AccountDetails />} />
+              <Route path="updatePassword" element={<UpdatePassword />} />
+              <Route path="deleteAccount" element={<DeleteAccount />} />
+              <Route path="newTransaction" element={<NewTransaction />} />
+              <Route path="transactionHistory" element={<TransactionHistory />} />
             </Route>
 
              <Route path="*" element={<NotFound />} />
