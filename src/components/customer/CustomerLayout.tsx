@@ -20,6 +20,7 @@ import HistoryIcon from '@mui/icons-material/History';
 import AddCardIcon from '@mui/icons-material/AddCard';
 import { useNavigate } from "react-router";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import Badge from '@mui/material/Badge';
 
 export default function CustomerLayout() {
   let navigate = useNavigate();
@@ -194,19 +195,25 @@ export default function CustomerLayout() {
           
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {menu}
-            <Typography
-              noWrap
-              component="div"
-              sx={{
-                display: { xs: 'none', md: 'flex' },
-                color: 'inherit',
-                textDecoration: 'none',
-                alignItems: 'center',
-                ml: 'auto'
-              }}
-            >
-              Vinod Parlapalli
-            </Typography>
+
+            <Box sx={{display: { xs: 'none', md: 'flex' }, alignItems: 'center', ml: 'auto', cursor: 'pointer'}} onClick={navigateToHome}>
+              <Typography
+                noWrap
+                component="div"
+                sx={{
+                  
+                  color: 'inherit',
+                  textDecoration: 'none',
+                  mr:1,
+                  
+                }}
+              >
+                Vinod Parlapalli
+              </Typography>
+              <Badge badgeContent={1000} max={1000000000000} color='secondary' showZero>
+                  <WalletIcon fontSize="large" />
+              </Badge>
+            </Box>
           </Box>
 
 
@@ -231,17 +238,24 @@ export default function CustomerLayout() {
             Banking UI
           </Typography>
 
-          <Typography
-            noWrap
-            component="div"
-            sx={{
-              display: { xs: 'flex', md: 'none' },
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            Vinod Parlapalli
-          </Typography>
+          <Box sx={{display: { xs: 'flex', md: 'none' }, alignItems: 'center', cursor: 'pointer'}} onClick={navigateToHome}>
+            <Typography
+              noWrap
+              component="div"
+              sx={{
+                
+                color: 'inherit',
+                textDecoration: 'none',
+                mr:1,
+                
+              }}
+            >
+              Vinod Parlapalli
+            </Typography>
+            <Badge badgeContent={1000} max={1000000000000} color="secondary" showZero>
+                <WalletIcon fontSize="large" />
+            </Badge>
+          </Box>
 
           <Box sx={{ flexGrow: 1, justifyContent: "flex-end", display: { xs: 'flex', md: 'none' }}}>
             <IconButton
