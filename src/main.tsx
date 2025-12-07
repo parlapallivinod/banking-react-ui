@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
 import { Provider } from 'react-redux'
-import { store } from './store.ts'
+import { store } from './app/store.ts'
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';

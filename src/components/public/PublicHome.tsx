@@ -1,47 +1,28 @@
 import { Outlet } from "react-router";
-import MapsHomeWorkIcon from '@mui/icons-material/MapsHomeWork';
-import Link from '@mui/material/Link';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
-import { styled } from '@mui/material/styles';
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: (theme.vars ?? theme).palette.text.secondary,
-  ...theme.applyStyles('dark', {
-    backgroundColor: '#1A2027',
-  }),
-}));
+import Container from '@mui/material/Container';
+
+import Typography from "@mui/material/Typography";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardActions from "@mui/material/CardActions";
+import Button from "@mui/material/Button";
 
 export default function PublicHome() {
   return (
     <div>
-      <h1>Pubic Home</h1>
-      <Link href="/login">
-      <MapsHomeWorkIcon style={{ fontSize: 100, color: 'SILVER' }} />
-      </Link>
+      <Container sx={{color:'grey', pt:4, pb:4,}}>
+        <Typography variant="h3" component="h3" sx={{mb:2,}}> Welcome to Banking UI </Typography>
 
-      <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2}>
-        <Grid size={8}>
-          <Item>size=8</Item>
-        </Grid>
-        <Grid size={4}>
-          <Item>size=4</Item>
-        </Grid>
-        <Grid size={4}>
-          <Item>size=4</Item>
-        </Grid>
-        <Grid size={8}>
-          <Item>size=8</Item>
-        </Grid>
-      </Grid>
-    </Box>
-     
+        <Typography variant="h5" component="h5" sx={{mb:2,}}>
+          Banking UI is used to simulate financial banking systems present in our society.
+        </Typography>
+
+        <Typography variant="h5">
+          Users can browse account details, update their passwords and delete their accounts. 
+          Users can browse transactions history and perform transactions of type deposit, withdraw and transfer on their accounts.
+        </Typography>
+     </Container>
     </div>
   );
 }
