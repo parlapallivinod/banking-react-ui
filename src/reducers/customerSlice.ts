@@ -91,7 +91,7 @@ const initialState: CustomerState = {
 }
 
 export const customerSlice = createSlice({
-  name: 'cuomer',
+  name: 'customer',
   initialState,
   reducers: {
     logout: (state: CustomerState) => {
