@@ -23,6 +23,7 @@ import Badge from '@mui/material/Badge';
 import { selectBalance, selectCustomer, selectUsername, logout, type Customer } from "../../reducers/customerSlice";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { useEffect } from 'react'
+import { MenuList } from '@mui/material';
 
 export default function CustomerMenu() {
   const navigate = useNavigate();
@@ -208,7 +209,7 @@ export default function CustomerMenu() {
             Banking UI
           </Typography>
           
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <MenuList sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {menu}
 
             <Box sx={{display: { xs: 'none', md: 'flex' }, alignItems: 'center', ml: 'auto', cursor: 'pointer'}} onClick={navigateToHome}>
@@ -228,7 +229,7 @@ export default function CustomerMenu() {
                   <WalletIcon fontSize="large" />
               </Badge>              
             </Box>
-          </Box>
+          </MenuList>
 
           <AccountBalanceIcon fontSize="large" sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, cursor: 'pointer',}} onClick={navigateToHome} />
           <Typography

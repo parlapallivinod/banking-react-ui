@@ -9,7 +9,19 @@ export const store = configureStore({
     common: commonReducer,
     public: publicReducer,
     customer: customerReducer
-  }
+  },
+
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        // Ignore these action types
+        ignoredActions: [],
+        // Ignore these field paths in all actions
+        ignoredActionPaths: ['payload'],
+        // Ignore these paths in the state
+        ignoredPaths: [],
+      },
+    }),
 })
 
 // Infer the `RootState`,  `AppDispatch`, and `AppStore` types from the store itself

@@ -13,6 +13,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import LoginIcon from '@mui/icons-material/Login';
 import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 import { useNavigate } from "react-router";
+import MenuList from '@mui/material/MenuList';
 
 
 
@@ -81,9 +82,9 @@ export default function PublicMenu() {
             Banking UI
           </Typography>
           
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <MenuList sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}}>
             {menu}
-          </Box>
+          </MenuList>
 
           <AccountBalanceIcon fontSize="large" sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, cursor: 'pointer',}} onClick={navigateToHome} />
           <Typography
