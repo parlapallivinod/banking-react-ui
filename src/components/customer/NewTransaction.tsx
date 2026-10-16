@@ -20,8 +20,9 @@ const validationSchema = yup.object({
     .oneOf(['DEPOSIT', 'WITHDRAW', 'TRANSFER'], 'Invalid Transaction Type'),
   amount: yup
     .number()
+    .typeError('Amount must be a number')
     .required('Amount is required')
-    .min(1, 'Amount should be at least 1'),
+    .min(1, 'Amount should be at least 1.'),
   toUser: yup
     .string()
 });
